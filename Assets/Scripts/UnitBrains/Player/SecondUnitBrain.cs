@@ -24,7 +24,6 @@ namespace UnitBrains.Player
         public SecondUnitBrain()
         {
             this.Id = UnitCount++;
-            Debug.Log($"Unit ID: {Id}");
         }
         
         protected override void GenerateProjectiles(Vector2Int forTarget, List<BaseProjectile> intoList)
