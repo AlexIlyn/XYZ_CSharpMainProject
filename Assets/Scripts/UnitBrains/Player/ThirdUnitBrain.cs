@@ -28,8 +28,6 @@ public class Third : DefaultPlayerUnitBrain
 
     public override Vector2Int GetNextStep()
     {
-        //Debug.Log($"Current state1: {_currentState}");
-        //Debug.Log($"Target state1: {_targetState}");
         if (_currentState == State.Moving)
         {
             return base.GetNextStep();
@@ -42,8 +40,6 @@ public class Third : DefaultPlayerUnitBrain
 
     protected override List<Vector2Int> SelectTargets()
     {
-        //Debug.Log($"Current state2: {_currentState}");
-        //Debug.Log($"Target state2: {_targetState}");
         if (_currentState == State.Attacking)
         {
             return base.SelectTargets();

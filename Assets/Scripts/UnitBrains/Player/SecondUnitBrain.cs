@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using Model;
 using Model.Runtime.Projectiles;
+using UnitBrains.Pathfinding;
 using UnityEngine;
 using Utilities;
 
@@ -62,7 +63,8 @@ namespace UnitBrains.Player
             }
             else
             {
-                return unit.Pos.CalcNextStepTowards(_dangerousTargets[targetNumber]);
+                ActivePath = new AStarUnitPath(runtimeModel, unit.Pos, _dangerousTargets[targetNumber]);
+                return ActivePath.GetNextStepFrom(unit.Pos);
             }
         }
 
