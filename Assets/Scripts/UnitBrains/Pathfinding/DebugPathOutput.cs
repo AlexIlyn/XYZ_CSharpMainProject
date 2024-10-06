@@ -74,7 +74,6 @@ namespace UnitBrains.Pathfinding
         {
             var pos = Gameplay3dView.ToWorldPosition(atCell, 1f);
             var highlight = Instantiate(cellHighlightPrefab, pos, Quaternion.identity);
-            //highlight.transform.SetParent(transform);
             allHighlights.Add(highlight);
         }
 
